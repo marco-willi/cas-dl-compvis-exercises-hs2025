@@ -1,0 +1,154 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dl_cv_lectures"
+version = "0.1.1"
+description = "Deep Learning for Computer Vision Lecture Tools"
+authors = [
+    {name = "Marco Willi", email = "marco.willi@fhnw.ch"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+
+dependencies = [
+    # --------- data & analysis -------- #
+    "pandas",
+    "numpy",
+    # --------- visualize -------- #
+    "matplotlib",
+    "seaborn",
+    # --------- data & image processing--------- #
+    "Pillow",
+    "opencv-python-headless",
+    # --------- machine learning --------- #
+    "mlxtend",
+    "scikit-learn",
+    "torch",
+    "torchvision",
+    "torchmetrics",
+    "torchshow",
+    "torchviz",
+    "torchinfo",
+    "lightning",
+    "transformers",
+    # --------- Hugging Face Ecosystem --------- #
+    "datasets",
+    "diffusers",
+    "huggingface_hub",
+    # --- generative ai--- #
+    "openai",
+    "replicate",
+    "google-generativeai",
+    # --------- Experiment Tracking --------- #
+    "tensorboard",
+    "wandb",
+    # --------- jupyter --------- #
+    "jupyter",
+    "ipykernel",
+    "ipywidgets",
+    "xeus-python",
+    "python-gitlab",
+    # --------- HTTP & APIs --------- #
+    "requests",
+    # --------- Utilities --------- #
+    "tqdm",
+    "python-dotenv",
+    "pyrootutils",
+    "gdown",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "argcomplete",
+    "pytest",
+    "mypy",
+    "pre-commit",
+    "rich",
+]
+
+extra = [
+    # extra dependencies which are not central
+    "scikit-image",
+    "optuna",
+    "kornia",
+    "captum",
+    "timm",
+    "pyppeteer",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dl_cv_lectures*"]
+
+[tool.ruff]
+# Ruff configuration for linting, formatting, and import sorting
+target-version = "py312"
+line-length = 88
+
+# Exclude directories
+exclude = [
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".tox",
+    ".venv",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+# Enable pycodestyle (E, W), pyflakes (F), isort (I), and other rules
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort (import sorting)
+    "C",    # flake8-comprehensions
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "RUF",  # ruff-specific rules
+    "SIM",  # flake8-simplify
+    "PTH",  # flake8-use-pathlib
+]
+
+ignore = [
+    "E501",  # line too long, handled by formatter
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "E203",  # whitespace before ':' (conflicts with formatter)
+]
+
+# Per-file ignores for specific files/patterns
+[tool.ruff.lint.per-file-ignores]
+# Environment check notebook intentionally imports many packages for testing
+"notebooks/00_env_check/env_check.ipynb" = ["F401", "I"]  # Unused import, Import ordering
+# All notebooks may have unused imports for Colab compatibility checks
+"notebooks/**/*.ipynb" = ["F401"]  # Unused import (includes Colab detection)
+
+[tool.ruff.format]
+# Use ruff for code formatting (replaces black)
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+# Import sorting configuration (replaces isort)
+known-first-party = ["dl_cv_lectures"]
+force-single-line = false
+force-sort-within-sections = false
+split-on-trailing-comma = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
