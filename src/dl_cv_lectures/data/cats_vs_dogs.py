@@ -7,6 +7,7 @@ import lightning as L
 from torch.utils.data import DataLoader
 
 from .. import utils
+from .image_folder import ImageFolder
 
 
 def download(download_dir: Path):
@@ -57,19 +58,19 @@ class CatsAndDogsData(L.LightningDataModule):
     def setup(self, stage=None):
         """Split the dataset into train, validation, and test sets."""
         if stage == "fit" or stage is None:
-            self.ds_train = CatsAndDogs(
+            self.ds_train = ImageFolder(
                 self.train_observations,
                 transform=self.train_transform,
                 classes=self.classes,
             )
-            self.ds_val = CatsAndDogs(
+            self.ds_val = ImageFolder(
                 self.val_observations,
                 transform=self.test_transform,
                 classes=self.classes,
             )
 
         if stage == "test" or stage is None:
-            self.ds_test = CatsAndDogs(
+            self.ds_test = ImageFolder(
                 self.test_observations,
                 transform=self.test_transform,
                 classes=self.classes,

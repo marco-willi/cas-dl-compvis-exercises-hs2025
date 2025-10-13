@@ -10,10 +10,10 @@ import torchvision.transforms as T
 class RandomQuadrantPad(torch.nn.Module):
     """Randomly place the input image in one of the four quadrants and pad the rest based on image size."""
 
-    def __init__(
-        self, choices=["top_left", "top_right", "bottom_left", "bottom_right"]
-    ):
+    def __init__(self, choices=None):
         super().__init__()
+        if choices is None:
+            choices = ["top_left", "top_right", "bottom_left", "bottom_right"]
         self.choices = choices
 
     def forward(self, image):
