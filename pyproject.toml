@@ -32,6 +32,7 @@ dependencies = [
     "torchshow",
     "torchviz",
     "torchinfo",
+    "visualtorch",
     "lightning",
     "transformers",
     # --------- Hugging Face Ecosystem --------- #
@@ -131,7 +132,8 @@ ignore = [
 # Environment check notebook intentionally imports many packages for testing - MOST SPECIFIC FIRST
 "notebooks/00_env_check/env_check.ipynb" = ["F401", "I", "E402"]  # Unused import, Import ordering, imports not at top
 # All notebooks may have unused imports for Colab compatibility checks
-"notebooks/**/*.ipynb" = ["F401", "E402"]  # Unused import (includes Colab detection), imports not at top
+"notebooks/**/*.ipynb" = ["F401", "E402", "W291"]  # Unused import (includes Colab detection), imports not at top
+"notebooks/template.ipynb" = ["F401", "E402"]  # Unused import (includes Colab detection), imports not at top
 
 [tool.ruff.format]
 # Use ruff for code formatting (replaces black)

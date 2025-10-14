@@ -23,6 +23,12 @@ Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/01_pytorch_and_images/pytorch_and_images.ipynb)
 
+### Exercise 02 - MLPs and Images
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/02_mlp_and_images/mlp_and_images.ipynb)
+
 ## Local
 
 ```
