@@ -1,6 +1,6 @@
 # Exercises for CAS Deep Learning - Module Computer Vision with Deep Learning (Part 1)
 
-This repository is used for the development and distribution of exercises for the CAS Deep Learning - Module Computer Vision with Deep Learning (Part 1).
+This repository is used for the distribution of exercises for the CAS Deep Learning - Module Computer Vision with Deep Learning (Part 1).
 
 There are several ways to work on the assignments:
 
@@ -28,6 +28,12 @@ Click on the following badge to open the notebook in Google Colab:
 Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/02_mlp_and_images/mlp_and_images.ipynb)
+
+### Exercise 03 - Convolutional Neural Networks
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/03_cnns/cnns.ipynb)
 
 ## Local
 
