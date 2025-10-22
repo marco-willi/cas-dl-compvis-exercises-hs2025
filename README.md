@@ -35,6 +35,18 @@ Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/03_cnns/cnns.ipynb)
 
+### Exercise 04 - Image Classification
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/04_classification_practical/classification_practical.ipynb)
+
+### Exercise 05 - Foundation Models
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-hs2025/blob/main/notebooks/05_foundation_models/foundation_models.ipynb)
+
 ## Local
 
 ```
